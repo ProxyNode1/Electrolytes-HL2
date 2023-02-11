@@ -1,0 +1,24 @@
+# Point Files
+*.prt
+
+# Backup files
+*.vmx
+
+# BSP/Build files
+*.bsp
+
+# Compile Log
+*.log
+
+# Ignore files in any temp Folder
+temp/
+
+# Other files
+*.pur
+
+# Shortcuts
+*.lnk
+
+# Ignore build files
+Build/
+Publish/

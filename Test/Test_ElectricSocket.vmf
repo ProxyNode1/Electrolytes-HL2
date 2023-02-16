@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8864"
-	"mapversion" "198"
+	"mapversion" "199"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -72,7 +72,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "198"
+	"mapversion" "199"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -3402,14 +3402,14 @@ entity
 	connections
 	{
 		"OnStartTouch" "Test_Electric_Teleport_PlugIntoSocket,Teleport,,0.02,-1"
-		"OnStartTouch" "Test_Electric_Phys_Plug,DisableMotion,,0.02,-1"
+		"OnStartTouch" "Test_Electric_Phys_Plug,DisableMotion,,0,-1"
 		"OnStartTouch" "Test_Electric_Phys_Plug,ForceDrop,,0,-1"
 		"OnStartTouch" "Test_Electric_LR_OnSocketPlugged,Trigger,,0,-1"
 		"OnEndTouch" "Test_Electric_LR_OnSocketUnplugged,Trigger,,1,-1"
-		"OnStartTouch" "Test_Electric_LR_EjectPlug,Enable,,0.02,-1"
-		"OnEndTouch" "Test_Electric_LR_EjectPlug,Disable,,0.02,-1"
-		"OnStartTouch" "Test_Electric_Counter_PluggedSockets,Add,,0.02,-1"
-		"OnEndTouch" "Test_Electric_Counter_PluggedSockets,Subtract,,0.02,-1"
+		"OnStartTouch" "Test_Electric_LR_EjectPlug,Enable,,0,-1"
+		"OnEndTouch" "Test_Electric_LR_EjectPlug,Disable,,0,-1"
+		"OnStartTouch" "Test_Electric_Counter_PluggedSockets,Add,1,0,-1"
+		"OnEndTouch" "Test_Electric_Counter_PluggedSockets,Subtract,1,0,-1"
 	}
 	solid
 	{

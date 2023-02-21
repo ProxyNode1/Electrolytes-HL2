@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8864"
-	"mapversion" "2"
+	"mapversion" "3"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -72,7 +72,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "2"
+	"mapversion" "3"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -98,7 +98,7 @@ entity
 	"mindxlevel" "0"
 	"model" "models/props_pipes/valve003.mdl"
 	"modelscale" "1.0"
-	"parentname" "Test_Water_Break_Valve_&i"
+	"parentname" "Water_Break_Valve_&i"
 	"PerformanceMode" "0"
 	"pressuredelay" "0"
 	"RandomAnimation" "0"
@@ -111,11 +111,11 @@ entity
 	"solid" "6"
 	"spawnflags" "0"
 	"StartDisabled" "0"
-	"targetname" "Test_Water_Break_Valve_Render_&i"
+	"targetname" "Water_Break_Valve_Render_&i"
 	"origin" "1.52588e-05 0 0"
 	editor
 	{
-		"color" "0 253 254"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -147,11 +147,11 @@ entity
 	"rendermode" "0"
 	"spawnflags" "0"
 	"spawnobject" "0"
-	"targetname" "Test_Water_Break_Valve_&i"
+	"targetname" "Water_Break_Valve_&i"
 	connections
 	{
-		"OnBreak" "Test_Water_Compare_TrainPath,Compare,,0.04,-1"
-		"OnBreak" "Test_Water_Counter_WaterLevel,Add,1,0,-1"
+		"OnBreak" "Water_Compare_TrainPath,Compare,,0.04,-1"
+		"OnBreak" "Water_Counter_WaterLevel,Add,1,0,-1"
 	}
 	solid
 	{
@@ -266,14 +266,14 @@ entity
 		}
 		editor
 		{
-			"color" "0 139 148"
+			"color" "220 30 220"
 			"visgroupshown" "1"
 			"visgroupautoshown" "1"
 		}
 	}
 	editor
 	{
-		"color" "0 139 148"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"

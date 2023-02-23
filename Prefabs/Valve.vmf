@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8864"
-	"mapversion" "3"
+	"mapversion" "4"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -72,7 +72,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "3"
+	"mapversion" "4"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -150,8 +150,8 @@ entity
 	"targetname" "Water_Break_Valve_&i"
 	connections
 	{
-		"OnBreak" "Water_Compare_TrainPath,Compare,,0.04,-1"
-		"OnBreak" "Water_Counter_WaterLevel,Add,1,0,-1"
+		"OnBreak" "Water_Particle_PipeLeak_&i,Start,,0,-1"
+		"OnBreak" "Water_Particle_PipeLeak_&i,Stop,,3,-1"
 	}
 	solid
 	{
@@ -277,6 +277,31 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "13"
+	"classname" "info_particle_system"
+	"angles" "0 90 0"
+	"cpoint1_parent" "0"
+	"cpoint2_parent" "0"
+	"cpoint3_parent" "0"
+	"cpoint4_parent" "0"
+	"cpoint5_parent" "0"
+	"cpoint6_parent" "0"
+	"cpoint7_parent" "0"
+	"effect_name" "WaterLeak_Pipe_1"
+	"flag_as_weather" "0"
+	"start_active" "0"
+	"targetname" "Water_Particle_PipeLeak_&i"
+	"origin" "0 0 0.0089035"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
 	}
 }
 cameras

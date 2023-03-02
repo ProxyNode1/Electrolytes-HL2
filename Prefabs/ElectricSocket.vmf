@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8864"
-	"mapversion" "15"
+	"mapversion" "20"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -72,31 +72,54 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "15"
+	"mapversion" "20"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
 	"maxpropscreenwidth" "-1"
 	"skyname" "sky_day01_01"
-	group
+}
+entity
+{
+	"id" "141"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "Electric_Relay_OnSocketPlugged_&i"
+	connections
 	{
-		"id" "461"
-		editor
-		{
-			"color" "0 206 179"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
+		"OnTrigger" "Electric_Relay_StopSocketElectricity_&i,Disable,,0,-1"
+		"OnTrigger" "Electric_Relay_StartSocketElectricity_&i,Disable,,0,-1"
+		"OnTrigger" "Electric_Relay_StopTrigHurting_&i,Trigger,,0,-1"
 	}
-	group
+	"origin" "512 -368 496"
+	editor
 	{
-		"id" "283"
-		editor
-		{
-			"color" "0 172 113"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 7000]"
+	}
+}
+entity
+{
+	"id" "154"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "Electric_Relay_StartSocketElectricity_&i"
+	connections
+	{
+		"OnTrigger" "Electric_Relay_StartTrigHurting_&i,Trigger,,0,-1"
+		"OnTrigger" "Electric_Relay_StopSocketElectricity_&i,Trigger,,5,-1"
+	}
+	"origin" "512 96 576"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 7000]"
 	}
 }
 entity
@@ -112,10 +135,10 @@ entity
 		"OnTrigger" "Electric_TrigHurt_HurtPlug_&i,Enable,,0,-1"
 		"OnTrigger" "Electric_TrigHurt_HurtPlug_&i,Disable,,0.1,-1"
 	}
-	"origin" "192 0 256"
+	"origin" "512 -608 576"
 	editor
 	{
-		"color" "0 170 243"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 7000]"
@@ -650,7 +673,7 @@ entity
 	"damagetype" "256"
 	"nodmgforce" "1"
 	"origin" "-4 -116 280"
-	"spawnflags" "11"
+	"spawnflags" "1035"
 	"StartDisabled" "0"
 	"targetname" "Electric_TrigHurt_Socket_&i"
 	connections
@@ -968,52 +991,6 @@ entity
 }
 entity
 {
-	"id" "143"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"targetname" "Electric_Relay_OnSocketUnplugged_&i"
-	connections
-	{
-		"OnTrigger" "Electric_Relay_StartSocketElectricity_&i,Trigger,,0.02,-1"
-		"OnTrigger" "Electric_Relay_StartSocketElectricity_&i,Enable,,0,-1"
-		"OnTrigger" "Electric_Relay_StopSocketElectricity_&i,Enable,,0,-1"
-	}
-	"origin" "768 -48 80"
-	editor
-	{
-		"color" "0 206 179"
-		"groupid" "461"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 7000]"
-	}
-}
-entity
-{
-	"id" "141"
-	"classname" "logic_relay"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"targetname" "Electric_Relay_OnSocketPlugged_&i"
-	connections
-	{
-		"OnTrigger" "Electric_Relay_StopSocketElectricity_&i,Disable,,0,-1"
-		"OnTrigger" "Electric_Relay_StartSocketElectricity_&i,Disable,,0,-1"
-		"OnTrigger" "Electric_Relay_StopTrigHurting_&i,Trigger,,0,-1"
-	}
-	"origin" "768 -128 136"
-	editor
-	{
-		"color" "0 206 179"
-		"groupid" "461"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 7000]"
-	}
-}
-entity
-{
 	"id" "163"
 	"classname" "logic_relay"
 	"spawnflags" "0"
@@ -1027,8 +1004,7 @@ entity
 	"origin" "512 -128 496"
 	editor
 	{
-		"color" "0 172 113"
-		"groupid" "283"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 7000]"
@@ -1049,8 +1025,7 @@ entity
 	"origin" "512 96 496"
 	editor
 	{
-		"color" "0 172 113"
-		"groupid" "283"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 7000]"
@@ -1071,8 +1046,7 @@ entity
 	"origin" "512 -128 576"
 	editor
 	{
-		"color" "0 172 113"
-		"groupid" "283"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 7000]"
@@ -1080,21 +1054,21 @@ entity
 }
 entity
 {
-	"id" "154"
+	"id" "143"
 	"classname" "logic_relay"
 	"spawnflags" "0"
 	"StartDisabled" "0"
-	"targetname" "Electric_Relay_StartSocketElectricity_&i"
+	"targetname" "Electric_Relay_OnSocketUnplugged_&i"
 	connections
 	{
-		"OnTrigger" "Electric_Relay_StartTrigHurting_&i,Trigger,,0,-1"
-		"OnTrigger" "Electric_Relay_StopSocketElectricity_&i,Trigger,,5,-1"
+		"OnTrigger" "Electric_Relay_StartSocketElectricity_&i,Trigger,,0.02,-1"
+		"OnTrigger" "Electric_Relay_StartSocketElectricity_&i,Enable,,0,-1"
+		"OnTrigger" "Electric_Relay_StopSocketElectricity_&i,Enable,,0,-1"
 	}
-	"origin" "512 96 576"
+	"origin" "512 -368 576"
 	editor
 	{
-		"color" "0 172 113"
-		"groupid" "283"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 7000]"

@@ -1,4 +1,4 @@
-Electrolytes, A HL2:Ep2 Level.
+Electrolytes, A level for HL2:Ep2.
 
 Pre-requisite:
 1. Half Life 2: Episode 2

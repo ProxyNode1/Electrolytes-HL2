@@ -7,6 +7,9 @@
 # BSP/Build files
 *.bsp
 
+#Include BSP files in Old Version
+\!/Old Version/*.bsp
+
 # Compile Log
 *.log
 
